@@ -22,9 +22,9 @@ function Shipyard(boat_type){
                 return new MotorBoat(100, 'wood', 'white');
             case 'Yacht':
                 return new Yacht(1, 200, 'white');
+            default:
+                console.log('Error! This shipayard has incompatible boat type!');
         };
-        // Нужно ли явно возвращать null там, где подразумевается завершение без результата? 
-        return null;
     };
     
     this.repairShip = ship => {
